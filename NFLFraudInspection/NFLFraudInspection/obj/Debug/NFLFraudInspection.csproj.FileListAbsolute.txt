@@ -1,0 +1,15 @@
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\bin\Debug\NFLFraudInspection.exe.config
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\bin\Debug\NFLFraudInspection.exe
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\bin\Debug\NFLFraudInspection.pdb
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.csproj.AssemblyReference.cache
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.Form1.resources
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.Forms.FrmTester.resources
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.Properties.Resources.resources
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.csproj.GenerateResource.cache
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.csproj.CoreCompileInputs.cache
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.exe
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.pdb
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\bin\Debug\NFLFraudInspection.exe.manifest
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\bin\Debug\NFLFraudInspection.application
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.exe.manifest
+C:\Users\j.leija\source\repos\NFLFraudInspection\NFLFraudInspection\obj\Debug\NFLFraudInspection.application
