@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -59,21 +60,27 @@ namespace NFLFraudInspection.Forms
         #region Logic
         private void SNScannedAction()
         {
-           
-            // 1. When serial number is scanned pull latest Fraud Tracker data.
-            fraudUnit = Db.GetFraudTracker(GetSerialNumber());
-            // 2. Reset tests
-            resetTests();
-            // 3. Populate data into GUI.
+            if (IsGoodSN(GetSerialNumber()))
+            {
+
+                // 1. When serial number is scanned pull latest Fraud Tracker data.
+                fraudUnit = Db.GetFraudTracker(GetSerialNumber());
+                // 2. Reset tests
+                resetTests();
+                // 3. Populate data into GUI.
+            
             if (fraudUnit != null) 
             {
                 SetFormValues(fraudUnit);
                 textBoxSN.Enabled = false;
+                UnlockTests();
             }
             else
             {
                 MsgTypes.printme("Unit " + GetSerialNumber() + " has not been tested on AFC.",this);
                 MsgTypes.printme("Please perform AFT Test.",this);
+            }
+
             }
         }
         private void CommitResultsAction()
@@ -135,6 +142,14 @@ namespace NFLFraudInspection.Forms
                     return "NONE";
             }
         }
+        private bool IsGoodSN(string sn)
+        {
+            if(sn.Length != 12  || !Regex.IsMatch(sn, "^[0-9 ]+$"))
+            {
+                return false;
+            }
+            return true;
+        }
         #endregion
 
         #region Controls
@@ -163,6 +178,29 @@ namespace NFLFraudInspection.Forms
             Result[BScreenResult] = InspectionResult.NONE;
             Result[XrayResult] = InspectionResult.NONE;
 
+            BlockTests();
+        }
+        private void BlockTests()
+        {
+            RadPSUPass.Enabled = false;
+            RadPSUFail.Enabled = false;
+            RadMagnetPass.Enabled = false;
+            RadMagnetFail.Enabled = false;
+            RadBScreenPass.Enabled = false;
+            RadBScreenFail.Enabled = false;
+            RadXrayPass.Enabled = false;
+            RadXrayFail.Enabled = false;
+        }
+        private void UnlockTests()
+        {
+            RadPSUPass.Enabled = true;
+            RadPSUFail.Enabled = true;
+            RadMagnetPass.Enabled = true;
+            RadMagnetFail.Enabled = true;
+            RadBScreenPass.Enabled = true;
+            RadBScreenFail.Enabled = true;
+            RadXrayPass.Enabled = true;
+            RadXrayFail.Enabled = true;
         }
         private string GetSerialNumber()
         {
