@@ -50,23 +50,16 @@ namespace NFLFraudInspection.Forms
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.textBoxSN = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label_loggedResult_BlueScreen = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label_loggedResult_MagnetTest = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label_loggedResult_PSUTest = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.RadXrayPass = new System.Windows.Forms.RadioButton();
             this.RadXrayFail = new System.Windows.Forms.RadioButton();
             this.label10 = new System.Windows.Forms.Label();
             this.BtnConfirm = new System.Windows.Forms.Button();
+            this.buttonCancel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -112,7 +105,7 @@ namespace NFLFraudInspection.Forms
             this.RadPSUPass.Location = new System.Drawing.Point(73, 16);
             this.RadPSUPass.Name = "RadPSUPass";
             this.RadPSUPass.Size = new System.Drawing.Size(153, 50);
-            this.RadPSUPass.TabIndex = 7;
+            this.RadPSUPass.TabIndex = 2;
             this.RadPSUPass.Text = "PASS";
             this.RadPSUPass.UseVisualStyleBackColor = true;
             this.RadPSUPass.CheckedChanged += new System.EventHandler(this.RadPSUPass_CheckedChanged);
@@ -121,10 +114,10 @@ namespace NFLFraudInspection.Forms
             // 
             this.RadPSUFail.AutoSize = true;
             this.RadPSUFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadPSUFail.Location = new System.Drawing.Point(341, 16);
+            this.RadPSUFail.Location = new System.Drawing.Point(459, 16);
             this.RadPSUFail.Name = "RadPSUFail";
             this.RadPSUFail.Size = new System.Drawing.Size(128, 50);
-            this.RadPSUFail.TabIndex = 8;
+            this.RadPSUFail.TabIndex = 3;
             this.RadPSUFail.Text = "FAIL";
             this.RadPSUFail.UseVisualStyleBackColor = true;
             this.RadPSUFail.CheckedChanged += new System.EventHandler(this.RadPSUFail_CheckedChanged);
@@ -136,7 +129,7 @@ namespace NFLFraudInspection.Forms
             this.RadMagnetPass.Location = new System.Drawing.Point(70, 14);
             this.RadMagnetPass.Name = "RadMagnetPass";
             this.RadMagnetPass.Size = new System.Drawing.Size(153, 50);
-            this.RadMagnetPass.TabIndex = 7;
+            this.RadMagnetPass.TabIndex = 4;
             this.RadMagnetPass.Text = "PASS";
             this.RadMagnetPass.UseVisualStyleBackColor = true;
             this.RadMagnetPass.CheckedChanged += new System.EventHandler(this.RadMagnetPass_CheckedChanged);
@@ -145,10 +138,10 @@ namespace NFLFraudInspection.Forms
             // 
             this.RadMagnetFail.AutoSize = true;
             this.RadMagnetFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadMagnetFail.Location = new System.Drawing.Point(338, 12);
+            this.RadMagnetFail.Location = new System.Drawing.Point(456, 12);
             this.RadMagnetFail.Name = "RadMagnetFail";
             this.RadMagnetFail.Size = new System.Drawing.Size(128, 50);
-            this.RadMagnetFail.TabIndex = 8;
+            this.RadMagnetFail.TabIndex = 5;
             this.RadMagnetFail.Text = "FAIL";
             this.RadMagnetFail.UseVisualStyleBackColor = true;
             this.RadMagnetFail.CheckedChanged += new System.EventHandler(this.RadMagnetFail_CheckedChanged);
@@ -172,7 +165,7 @@ namespace NFLFraudInspection.Forms
             this.RadBScreenPass.Location = new System.Drawing.Point(70, 16);
             this.RadBScreenPass.Name = "RadBScreenPass";
             this.RadBScreenPass.Size = new System.Drawing.Size(153, 50);
-            this.RadBScreenPass.TabIndex = 7;
+            this.RadBScreenPass.TabIndex = 6;
             this.RadBScreenPass.Text = "PASS";
             this.RadBScreenPass.UseVisualStyleBackColor = true;
             this.RadBScreenPass.CheckedChanged += new System.EventHandler(this.RadBScreenPass_CheckedChanged);
@@ -181,10 +174,10 @@ namespace NFLFraudInspection.Forms
             // 
             this.RadBScreenFail.AutoSize = true;
             this.RadBScreenFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadBScreenFail.Location = new System.Drawing.Point(338, 16);
+            this.RadBScreenFail.Location = new System.Drawing.Point(456, 16);
             this.RadBScreenFail.Name = "RadBScreenFail";
             this.RadBScreenFail.Size = new System.Drawing.Size(128, 50);
-            this.RadBScreenFail.TabIndex = 8;
+            this.RadBScreenFail.TabIndex = 7;
             this.RadBScreenFail.Text = "FAIL";
             this.RadBScreenFail.UseVisualStyleBackColor = true;
             this.RadBScreenFail.CheckedChanged += new System.EventHandler(this.RadBScreenFail_CheckedChanged);
@@ -207,7 +200,7 @@ namespace NFLFraudInspection.Forms
             this.prompt.ForeColor = System.Drawing.Color.Lime;
             this.prompt.Location = new System.Drawing.Point(4, 801);
             this.prompt.Name = "prompt";
-            this.prompt.Size = new System.Drawing.Size(623, 43);
+            this.prompt.Size = new System.Drawing.Size(623, 52);
             this.prompt.TabIndex = 11;
             this.prompt.Text = "";
             // 
@@ -226,7 +219,7 @@ namespace NFLFraudInspection.Forms
             // pictureBox2
             // 
             this.pictureBox2.Image = global::NFLFraudInspection.Properties.Resources.delete_48;
-            this.pictureBox2.Location = new System.Drawing.Point(262, 16);
+            this.pictureBox2.Location = new System.Drawing.Point(380, 16);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(48, 48);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -236,7 +229,7 @@ namespace NFLFraudInspection.Forms
             // pictureBox1
             // 
             this.pictureBox1.Image = global::NFLFraudInspection.Properties.Resources.check_48;
-            this.pictureBox1.Location = new System.Drawing.Point(5, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(48, 48);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -246,7 +239,7 @@ namespace NFLFraudInspection.Forms
             // pictureBox3
             // 
             this.pictureBox3.Image = global::NFLFraudInspection.Properties.Resources.delete_48;
-            this.pictureBox3.Location = new System.Drawing.Point(259, 14);
+            this.pictureBox3.Location = new System.Drawing.Point(377, 14);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(48, 48);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -266,7 +259,7 @@ namespace NFLFraudInspection.Forms
             // pictureBox5
             // 
             this.pictureBox5.Image = global::NFLFraudInspection.Properties.Resources.delete_48;
-            this.pictureBox5.Location = new System.Drawing.Point(259, 16);
+            this.pictureBox5.Location = new System.Drawing.Point(377, 16);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(48, 48);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -292,14 +285,12 @@ namespace NFLFraudInspection.Forms
             this.textBoxSN.Location = new System.Drawing.Point(117, 55);
             this.textBoxSN.Name = "textBoxSN";
             this.textBoxSN.Size = new System.Drawing.Size(471, 42);
-            this.textBoxSN.TabIndex = 19;
+            this.textBoxSN.TabIndex = 1;
             this.textBoxSN.TextChanged += new System.EventHandler(this.textBoxSN_TextChanged);
             this.textBoxSN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSN_KeyDown);
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label_loggedResult_BlueScreen);
-            this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.pictureBox6);
             this.panel1.Controls.Add(this.RadBScreenPass);
             this.panel1.Controls.Add(this.RadBScreenFail);
@@ -309,28 +300,8 @@ namespace NFLFraudInspection.Forms
             this.panel1.Size = new System.Drawing.Size(599, 86);
             this.panel1.TabIndex = 20;
             // 
-            // label_loggedResult_BlueScreen
-            // 
-            this.label_loggedResult_BlueScreen.AutoSize = true;
-            this.label_loggedResult_BlueScreen.Location = new System.Drawing.Point(501, 44);
-            this.label_loggedResult_BlueScreen.Name = "label_loggedResult_BlueScreen";
-            this.label_loggedResult_BlueScreen.Size = new System.Drawing.Size(44, 17);
-            this.label_loggedResult_BlueScreen.TabIndex = 1;
-            this.label_loggedResult_BlueScreen.Text = "PASS";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(479, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(97, 17);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Lastest result:";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.label_loggedResult_MagnetTest);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.RadMagnetPass);
             this.panel2.Controls.Add(this.RadMagnetFail);
@@ -340,28 +311,8 @@ namespace NFLFraudInspection.Forms
             this.panel2.Size = new System.Drawing.Size(599, 77);
             this.panel2.TabIndex = 20;
             // 
-            // label_loggedResult_MagnetTest
-            // 
-            this.label_loggedResult_MagnetTest.AutoSize = true;
-            this.label_loggedResult_MagnetTest.Location = new System.Drawing.Point(507, 49);
-            this.label_loggedResult_MagnetTest.Name = "label_loggedResult_MagnetTest";
-            this.label_loggedResult_MagnetTest.Size = new System.Drawing.Size(44, 17);
-            this.label_loggedResult_MagnetTest.TabIndex = 1;
-            this.label_loggedResult_MagnetTest.Text = "PASS";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(485, 16);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(97, 17);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Lastest result:";
-            // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.label_loggedResult_PSUTest);
-            this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.pictureBox1);
             this.panel3.Controls.Add(this.RadPSUPass);
             this.panel3.Controls.Add(this.RadPSUFail);
@@ -371,28 +322,8 @@ namespace NFLFraudInspection.Forms
             this.panel3.Size = new System.Drawing.Size(602, 77);
             this.panel3.TabIndex = 20;
             // 
-            // label_loggedResult_PSUTest
-            // 
-            this.label_loggedResult_PSUTest.AutoSize = true;
-            this.label_loggedResult_PSUTest.Location = new System.Drawing.Point(512, 37);
-            this.label_loggedResult_PSUTest.Name = "label_loggedResult_PSUTest";
-            this.label_loggedResult_PSUTest.Size = new System.Drawing.Size(44, 17);
-            this.label_loggedResult_PSUTest.TabIndex = 1;
-            this.label_loggedResult_PSUTest.Text = "PASS";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(488, 12);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(97, 17);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Lastest result:";
-            // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label9);
             this.panel4.Controls.Add(this.pictureBox7);
             this.panel4.Controls.Add(this.pictureBox8);
             this.panel4.Controls.Add(this.RadXrayPass);
@@ -402,28 +333,10 @@ namespace NFLFraudInspection.Forms
             this.panel4.Size = new System.Drawing.Size(604, 87);
             this.panel4.TabIndex = 26;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(512, 44);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "PASS";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(490, 11);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(97, 17);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Lastest result:";
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::NFLFraudInspection.Properties.Resources.delete_48;
-            this.pictureBox7.Location = new System.Drawing.Point(264, 15);
+            this.pictureBox7.Location = new System.Drawing.Point(382, 15);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(48, 48);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -447,7 +360,7 @@ namespace NFLFraudInspection.Forms
             this.RadXrayPass.Location = new System.Drawing.Point(75, 15);
             this.RadXrayPass.Name = "RadXrayPass";
             this.RadXrayPass.Size = new System.Drawing.Size(153, 50);
-            this.RadXrayPass.TabIndex = 21;
+            this.RadXrayPass.TabIndex = 8;
             this.RadXrayPass.Text = "PASS";
             this.RadXrayPass.UseVisualStyleBackColor = true;
             this.RadXrayPass.CheckedChanged += new System.EventHandler(this.RadXrayPass_CheckedChanged);
@@ -456,10 +369,10 @@ namespace NFLFraudInspection.Forms
             // 
             this.RadXrayFail.AutoSize = true;
             this.RadXrayFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadXrayFail.Location = new System.Drawing.Point(343, 15);
+            this.RadXrayFail.Location = new System.Drawing.Point(461, 15);
             this.RadXrayFail.Name = "RadXrayFail";
             this.RadXrayFail.Size = new System.Drawing.Size(128, 50);
-            this.RadXrayFail.TabIndex = 22;
+            this.RadXrayFail.TabIndex = 9;
             this.RadXrayFail.Text = "FAIL";
             this.RadXrayFail.UseVisualStyleBackColor = true;
             this.RadXrayFail.CheckedChanged += new System.EventHandler(this.RadXrayFail_CheckedChanged);
@@ -478,21 +391,38 @@ namespace NFLFraudInspection.Forms
             // 
             // BtnConfirm
             // 
-            this.BtnConfirm.Enabled = false;
+            this.BtnConfirm.BackColor = System.Drawing.Color.SpringGreen;
+            this.BtnConfirm.FlatAppearance.BorderSize = 0;
+            this.BtnConfirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnConfirm.Location = new System.Drawing.Point(-2, 739);
+            this.BtnConfirm.Location = new System.Drawing.Point(7, 739);
             this.BtnConfirm.Name = "BtnConfirm";
-            this.BtnConfirm.Size = new System.Drawing.Size(629, 56);
-            this.BtnConfirm.TabIndex = 27;
+            this.BtnConfirm.Size = new System.Drawing.Size(256, 56);
+            this.BtnConfirm.TabIndex = 10;
             this.BtnConfirm.Text = "Confirm";
-            this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.UseVisualStyleBackColor = false;
             this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
+            // 
+            // buttonCancel
+            // 
+            this.buttonCancel.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.buttonCancel.FlatAppearance.BorderSize = 0;
+            this.buttonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCancel.Location = new System.Drawing.Point(355, 739);
+            this.buttonCancel.Name = "buttonCancel";
+            this.buttonCancel.Size = new System.Drawing.Size(256, 56);
+            this.buttonCancel.TabIndex = 10;
+            this.buttonCancel.Text = "Cancel";
+            this.buttonCancel.UseVisualStyleBackColor = false;
+            this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
             // FrmTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 888);
+            this.ClientSize = new System.Drawing.Size(622, 893);
+            this.Controls.Add(this.buttonCancel);
             this.Controls.Add(this.BtnConfirm);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);
@@ -553,22 +483,15 @@ namespace NFLFraudInspection.Forms
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.TextBox textBoxSN;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label_loggedResult_BlueScreen;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label_loggedResult_MagnetTest;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label_loggedResult_PSUTest;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.RadioButton RadXrayFail;
         private System.Windows.Forms.RadioButton RadXrayPass;
         private System.Windows.Forms.Button BtnConfirm;
+        private System.Windows.Forms.Button buttonCancel;
     }
 }

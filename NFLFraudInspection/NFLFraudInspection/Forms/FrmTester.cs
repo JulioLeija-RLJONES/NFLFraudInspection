@@ -44,24 +44,36 @@ namespace NFLFraudInspection.Forms
             Db.Open();
             MsgTypes.printme("connection to database completed.", this);
             MsgTypes.printme("scan serial number to start fraud tests.", this);
+
+            initForm();
         }
+        private void initForm()
+        {
+            this.Size = new Size(480,740);
+            this.Location = new Point((int)(Screen.PrimaryScreen.Bounds.Width / 2)-this.Width/2, 
+                (int)(Screen.PrimaryScreen.Bounds.Height / 2)-this.Height/2-50);
+        }
+
 
 
         #region Logic
         private void SNScannedAction()
         {
-            //0. Reset tests
-            resetTests();
+           
             // 1. When serial number is scanned pull latest Fraud Tracker data.
             fraudUnit = Db.GetFraudTracker(GetSerialNumber());
-            // 2. Populate data into GUI.
-            if(fraudUnit.AFCTest != null) 
+            // 2. Reset tests
+            resetTests();
+            // 3. Populate data into GUI.
+            if (fraudUnit != null) 
             {
                 SetFormValues(fraudUnit);
+                textBoxSN.Enabled = false;
             }
             else
             {
-                MsgTypes.printme("Unit " + GetSerialNumber() + " has not been tested on AFC. Please perform AFT Test",this);
+                MsgTypes.printme("Unit " + GetSerialNumber() + " has not been tested on AFC.",this);
+                MsgTypes.printme("Please perform AFT Test.",this);
             }
         }
         private void CommitResultsAction()
@@ -71,11 +83,17 @@ namespace NFLFraudInspection.Forms
             Db.SetTestResult(fraudUnit.FraudId, "BlueScreenInspection", ResultToString(Result[BScreenResult]));
             Db.SetTestResult(fraudUnit.FraudId, "XrayTest", ResultToString(Result[XrayResult]));
 
-            MsgTypes.printme("results committed.", this);
+
             MsgTypes.printme("PSU: " + Result[PSUResult],this);
             MsgTypes.printme("Magnet: " + Result[MagnetResult],this);
             MsgTypes.printme("BlueScreen: " + Result[BScreenResult],this);
             MsgTypes.printme("Xray: " + Result[XrayResult],this);
+            MsgTypes.printme("results for " + GetSerialNumber() + " committed.",this);
+
+            resetTests();
+
+            textBoxSN.Enabled = true;
+            //textBoxSN.Clear();
         }
         private void SetFormValues(FraudTracker data)
         {
@@ -144,6 +162,7 @@ namespace NFLFraudInspection.Forms
             Result[MagnetResult] = InspectionResult.NONE;
             Result[BScreenResult] = InspectionResult.NONE;
             Result[XrayResult] = InspectionResult.NONE;
+
         }
         private string GetSerialNumber()
         {
@@ -168,7 +187,6 @@ namespace NFLFraudInspection.Forms
         {
             Result[PSUResult] = ParseResult(result);
         }
-        
         private void SetMagnetResult(FraudTracker data)
         {
             if (data.MagnetTest != "")
@@ -266,29 +284,24 @@ namespace NFLFraudInspection.Forms
             MsgTypes.printme("BlueScreen: " + Result[BScreenResult], this);
             MsgTypes.printme("Xray: " + Result[XrayResult], this);
         }
-
         private void RadPSUPass_CheckedChanged(object sender, EventArgs e)
         {
             Result[PSUResult] = InspectionResult.PASS;
             BtnConfirm.Enabled = (RadPSUPass.Checked);
         }
-
         private void RadPSUFail_CheckedChanged(object sender, EventArgs e)
         {
             Result[PSUResult] = InspectionResult.FAIL;
         }
-
         private void RadMagnetPass_CheckedChanged(object sender, EventArgs e)
         {
             Result[MagnetResult] = InspectionResult.PASS;
             BtnConfirm.Enabled = RadMagnetPass.Checked;
         }
-
         private void RadMagnetFail_CheckedChanged(object sender, EventArgs e)
         {
             Result[MagnetResult] = InspectionResult.FAIL;
         }
-
         private void RadBScreenPass_CheckedChanged(object sender, EventArgs e)
         {
             Result[BScreenResult] = InspectionResult.PASS;
@@ -298,27 +311,33 @@ namespace NFLFraudInspection.Forms
         {
             Result[BScreenResult] = InspectionResult.FAIL;
         }
-
         private void textBoxSN_TextChanged(object sender, EventArgs e)
         {
             //resetTests();
         }
+
+     
 
         private void RadXrayPass_CheckedChanged(object sender, EventArgs e)
         {
             Result[XrayResult] = InspectionResult.PASS;
             BtnConfirm.Enabled = true;
         }
-
         private void RadXrayFail_CheckedChanged(object sender, EventArgs e)
         {
             Result[XrayResult] = InspectionResult.FAIL;
             BtnConfirm.Enabled = true;
         }
-
         private void BtnConfirm_Click(object sender, EventArgs e)
         {
             CommitResultsAction();
+        }
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            resetTests();
+            textBoxSN.Enabled = true;
+            textBoxSN.Clear();
+            
         }
         #endregion
 
