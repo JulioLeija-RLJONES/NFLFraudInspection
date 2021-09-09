@@ -210,7 +210,7 @@ namespace NFLFraudInspection.Forms
         }
         private void textBoxSN_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 SNScannedAction();
             }
