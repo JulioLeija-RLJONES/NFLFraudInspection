@@ -93,7 +93,7 @@ namespace NFLFraudInspection.Forms
             resetTests();
 
             textBoxSN.Enabled = true;
-            //textBoxSN.Clear();
+            textBoxSN.Clear();
         }
         private void SetFormValues(FraudTracker data)
         {
