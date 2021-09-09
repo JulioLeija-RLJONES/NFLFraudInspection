@@ -84,9 +84,10 @@ namespace NFLFraudInspection
                     //ReceivedDate = Convert.ToDateTime(row.FieldValues[5]),
                     //Channel = row.FieldValues[6].ToString(),
                     FraudLoop = Convert.ToInt32(row.FieldValues[9]),
-                    DeviceType = row.FieldValues[2].ToString(),
+                    DeviceType = row.FieldValues[10].ToString(),
                     BlueScreenInspection = row.FieldValues[14].ToString(),
-                    SerialNumber = row.FieldValues[3].ToString(),
+                    SerialNumber = row.FieldValues[16].ToString(),
+                    XrayTest = row.FieldValues[19].ToString(),
                     IsCaptured =  Convert.ToInt32(row.FieldValues[7])
                 };
 
@@ -120,8 +121,8 @@ namespace NFLFraudInspection
                 tracker = new FraudTracker()
                 {
                     /*
-                     * Commented properties will be updated by azure cloud job
-                     */
+                        * Commented properties will be updated by azure cloud job
+                        */
                     FraudId = Convert.ToInt32(row.FieldValues[0]),
                     //UnitId = Convert.ToInt32(row.FieldValues[1]),
                     PartNumber = row.FieldValues[2].ToString(),
@@ -130,9 +131,10 @@ namespace NFLFraudInspection
                     //ReceivedDate = Convert.ToDateTime(row.FieldValues[5]),
                     //Channel = row.FieldValues[6].ToString(),
                     FraudLoop = Convert.ToInt32(row.FieldValues[9]),
-                    DeviceType = row.FieldValues[2].ToString(),
+                    DeviceType = row.FieldValues[10].ToString(),
                     BlueScreenInspection = row.FieldValues[14].ToString(),
-                    SerialNumber = row.FieldValues[3].ToString(),
+                    SerialNumber = row.FieldValues[16].ToString(),
+                    XrayTest = row.FieldValues[19].ToString(),
                     IsCaptured = Convert.ToInt32(row.FieldValues[7])
                 };
 
@@ -165,17 +167,21 @@ namespace NFLFraudInspection
                 var row = data[0];
                 tracker = new FraudTracker()
                 {
+                    /*
+                             * Commented properties will be updated by azure cloud job
+                             */
                     FraudId = Convert.ToInt32(row.FieldValues[0]),
-                    UnitId = Convert.ToInt32(row.FieldValues[1]),
+                    //UnitId = Convert.ToInt32(row.FieldValues[1]),
                     PartNumber = row.FieldValues[2].ToString(),
-                    Family = row.FieldValues[3].ToString(),
-                    IsFraudTarget = Convert.ToInt32(row.FieldValues[4]),
-                    ReceivedDate = Convert.ToDateTime(row.FieldValues[5]),
-                    Channel = row.FieldValues[6].ToString(),
+                    //Family = row.FieldValues[3].ToString(),
+                    //IsFraudTarget = Convert.ToInt32(row.FieldValues[4]),
+                    //ReceivedDate = Convert.ToDateTime(row.FieldValues[5]),
+                    //Channel = row.FieldValues[6].ToString(),
                     FraudLoop = Convert.ToInt32(row.FieldValues[9]),
-                    DeviceType = row.FieldValues[2].ToString(),
+                    DeviceType = row.FieldValues[10].ToString(),
                     BlueScreenInspection = row.FieldValues[14].ToString(),
-                    SerialNumber = row.FieldValues[3].ToString(),
+                    SerialNumber = row.FieldValues[16].ToString(),
+                    XrayTest = row.FieldValues[19].ToString(),
                     IsCaptured = Convert.ToInt32(row.FieldValues[7])
                 };
 
@@ -250,6 +256,11 @@ namespace NFLFraudInspection
               case "BlueScreenInspection":
                     sql = "UPDATE dbo.tbl_MSFTFraud_Tracker " +
                         "SET BlueScreenInspection = @Result " +
+                        "WHERE FraudId = @FraudId";
+                    break;
+                case "XrayTest":
+                    sql = "UPDATE dbo.tbl_MSFTFraud_Tracker " +
+                        "SET XrayTest = @Result " +
                         "WHERE FraudId = @FraudId";
                     break;
 

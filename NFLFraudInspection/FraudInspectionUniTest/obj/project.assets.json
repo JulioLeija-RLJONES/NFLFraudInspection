@@ -4630,11 +4630,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\j.leija\\source\\repos\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
+      "projectUniqueName": "C:\\Users\\j.leija\\source\\git\\NFLFraudInspection\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
       "projectName": "FraudInspectionUniTest",
-      "projectPath": "C:\\Users\\j.leija\\source\\repos\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
+      "projectPath": "C:\\Users\\j.leija\\source\\git\\NFLFraudInspection\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
       "packagesPath": "C:\\Users\\j.leija\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\j.leija\\source\\repos\\NFLFraudInspection\\FraudInspectionUniTest\\obj\\",
+      "outputPath": "C:\\Users\\j.leija\\source\\git\\NFLFraudInspection\\NFLFraudInspection\\FraudInspectionUniTest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

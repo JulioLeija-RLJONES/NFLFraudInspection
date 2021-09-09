@@ -63,9 +63,9 @@ namespace NFLFraudInspection.Forms
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.RadXrayFail = new System.Windows.Forms.RadioButton();
             this.RadXrayPass = new System.Windows.Forms.RadioButton();
+            this.RadXrayFail = new System.Windows.Forms.RadioButton();
+            this.label10 = new System.Windows.Forms.Label();
             this.BtnConfirm = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -203,11 +203,11 @@ namespace NFLFraudInspection.Forms
             // 
             this.prompt.BackColor = System.Drawing.Color.Black;
             this.prompt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.prompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.prompt.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.prompt.ForeColor = System.Drawing.Color.Lime;
-            this.prompt.Location = new System.Drawing.Point(-2, 837);
+            this.prompt.Location = new System.Drawing.Point(4, 801);
             this.prompt.Name = "prompt";
-            this.prompt.Size = new System.Drawing.Size(623, 63);
+            this.prompt.Size = new System.Drawing.Size(623, 43);
             this.prompt.TabIndex = 11;
             this.prompt.Text = "";
             // 
@@ -293,6 +293,7 @@ namespace NFLFraudInspection.Forms
             this.textBoxSN.Name = "textBoxSN";
             this.textBoxSN.Size = new System.Drawing.Size(471, 42);
             this.textBoxSN.TabIndex = 19;
+            this.textBoxSN.TextChanged += new System.EventHandler(this.textBoxSN_TextChanged);
             this.textBoxSN.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBoxSN_KeyDown);
             // 
             // panel1
@@ -439,17 +440,17 @@ namespace NFLFraudInspection.Forms
             this.pictureBox8.TabIndex = 24;
             this.pictureBox8.TabStop = false;
             // 
-            // label10
+            // RadXrayPass
             // 
-            this.label10.BackColor = System.Drawing.Color.DimGray;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(1, 577);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(620, 66);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Xray Inspection";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RadXrayPass.AutoSize = true;
+            this.RadXrayPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RadXrayPass.Location = new System.Drawing.Point(75, 15);
+            this.RadXrayPass.Name = "RadXrayPass";
+            this.RadXrayPass.Size = new System.Drawing.Size(153, 50);
+            this.RadXrayPass.TabIndex = 21;
+            this.RadXrayPass.Text = "PASS";
+            this.RadXrayPass.UseVisualStyleBackColor = true;
+            this.RadXrayPass.CheckedChanged += new System.EventHandler(this.RadXrayPass_CheckedChanged);
             // 
             // RadXrayFail
             // 
@@ -463,17 +464,17 @@ namespace NFLFraudInspection.Forms
             this.RadXrayFail.UseVisualStyleBackColor = true;
             this.RadXrayFail.CheckedChanged += new System.EventHandler(this.RadXrayFail_CheckedChanged);
             // 
-            // RadXrayPass
+            // label10
             // 
-            this.RadXrayPass.AutoSize = true;
-            this.RadXrayPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RadXrayPass.Location = new System.Drawing.Point(75, 15);
-            this.RadXrayPass.Name = "RadXrayPass";
-            this.RadXrayPass.Size = new System.Drawing.Size(153, 50);
-            this.RadXrayPass.TabIndex = 21;
-            this.RadXrayPass.Text = "PASS";
-            this.RadXrayPass.UseVisualStyleBackColor = true;
-            this.RadXrayPass.CheckedChanged += new System.EventHandler(this.RadXrayPass_CheckedChanged);
+            this.label10.BackColor = System.Drawing.Color.DimGray;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(1, 577);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(620, 66);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Xray Inspection";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BtnConfirm
             // 
@@ -481,16 +482,17 @@ namespace NFLFraudInspection.Forms
             this.BtnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnConfirm.Location = new System.Drawing.Point(-2, 739);
             this.BtnConfirm.Name = "BtnConfirm";
-            this.BtnConfirm.Size = new System.Drawing.Size(629, 98);
+            this.BtnConfirm.Size = new System.Drawing.Size(629, 56);
             this.BtnConfirm.TabIndex = 27;
             this.BtnConfirm.Text = "Confirm";
             this.BtnConfirm.UseVisualStyleBackColor = true;
+            this.BtnConfirm.Click += new System.EventHandler(this.BtnConfirm_Click);
             // 
             // FrmTester
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 895);
+            this.ClientSize = new System.Drawing.Size(623, 888);
             this.Controls.Add(this.BtnConfirm);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

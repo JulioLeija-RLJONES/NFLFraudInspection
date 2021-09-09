@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "u/1KuNP8ZGjXaZnc9X3vnihJoBVd9wuCFQ7nkWmUeLPTdI5i3YbCfGwLQMniNWVNUunpz0Oj84IaQMmpGf5IsQ==",
+  "dgSpecHash": "TUw8nqK+kcGaLH0fxuyigGylL0liPmAqOp8FaOIeWdZ+fsYTqvezqLqnNWlecGHJYSxKc382mfrTwlZ9sCt1lQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\j.leija\\source\\repos\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
+  "projectFilePath": "C:\\Users\\j.leija\\source\\git\\NFLFraudInspection\\NFLFraudInspection\\FraudInspectionUniTest\\FraudInspectionUniTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\j.leija\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\j.leija\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
