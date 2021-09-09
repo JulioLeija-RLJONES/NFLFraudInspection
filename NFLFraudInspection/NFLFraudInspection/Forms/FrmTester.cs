@@ -51,7 +51,7 @@ namespace NFLFraudInspection.Forms
         {
             this.Size = new Size(480,740);
             this.Location = new Point((int)(Screen.PrimaryScreen.Bounds.Width / 2)-this.Width/2, 
-                (int)(Screen.PrimaryScreen.Bounds.Height / 2)-this.Height/2-50);
+                (int)(Screen.PrimaryScreen.Bounds.Height / 2)-this.Height/2-20);
         }
 
 
