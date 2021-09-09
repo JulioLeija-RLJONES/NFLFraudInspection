@@ -24,9 +24,12 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>https://nflapplicationstorage.blob.core.windows.net/nflapps/NFLFraudInspection/</InstallUrl>
+    <ProductName>NFL Fraud Inspection Tests</ProductName>
+    <PublisherName>Julio Leija</PublisherName>
+    <SuiteName>NFL Fraud Inspection Tests</SuiteName>
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
-    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationRevision>2</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
